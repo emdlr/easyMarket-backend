@@ -1,3 +1,8 @@
-Edgar Branch
+let test =""
+test ="Edgar"
 
-Cesar Branch
+function getName(name){
+    console.log(name)
+}
+
+getName(test);
