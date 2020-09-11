@@ -6,16 +6,18 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
-      },
-      name: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER
       },
       username: {
+        allowNull: false,
         type: Sequelize.STRING,
-        unique: null,
+        unique: true,
       },
       password: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      email: {
         type: Sequelize.STRING,
       },
       createdAt: {
