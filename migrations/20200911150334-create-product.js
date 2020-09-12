@@ -29,7 +29,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       picture: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       }
     });
   },
