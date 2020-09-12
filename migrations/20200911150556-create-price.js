@@ -28,6 +28,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.FLOAT
       }
+    },
+    {
+      uniqueKeys: {
+          actions_unique: {
+              fields: ["storeId", "productId"]
+          }
+      }
     });
   },
   down: async (queryInterface, Sequelize) => {
