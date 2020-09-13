@@ -31,4 +31,9 @@ router.post("/lists", async (req,res) =>{
     const list = await ListModel.bulkCreate(req.body,{returning:true});
     res.json({list})
 });
+//Updates products picked Status from a list
+router.put("/lists/:id", async (req,res) =>{
+    let list = await ListModel.update({pickedStatus:req.body.newStatus},{where:{id:req.params.id},returning: true});
+    res.json({list})
+  });
 module.exports = router;
