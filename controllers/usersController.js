@@ -29,5 +29,25 @@ router.get("/profile/:id", async (req, res) => {
                                                   });
   res.json({ user });
 });
-
+router.post("/", async (req,res) =>{
+  let user;
+  user = await UserModel.findOne({where:{username:req.body.username}})
+  
+  if(user){
+    res.send("400")
+  }else{
+    user = await UserModel.create(req.body);
+    res.json({user})
+  }
+});
+router.post("/login", async (req,res) =>{
+  let user;
+  user = await UserModel.findOne({where:{username:req.body.username,password:req.body.password}})
+  
+  if(user){
+    res.json({user})
+  }else{
+    res.send("400")
+  }
+});
 module.exports = router;
