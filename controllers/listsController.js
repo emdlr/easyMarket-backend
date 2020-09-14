@@ -23,7 +23,7 @@ router.get("/stores/:id/products", async (req,res) =>{
                                                 include:[{
                                                     model:UnitModel
                                                 }]
-                                            }]});
+                                            }],order:[[ProductModel,"categoryId"]]});
     res.json({prices})
 });
 
