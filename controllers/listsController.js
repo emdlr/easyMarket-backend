@@ -36,4 +36,10 @@ router.put("/lists/:id", async (req,res) =>{
     let list = await ListModel.update({pickedStatus:req.body.newStatus},{where:{id:req.params.id},returning: true});
     res.json({list})
   });
+
+//Deletes a List
+router.delete("/lists/:name/user/:id", async (req,res) =>{
+    let list = await ListModel.destroy({where:{userId:req.params.id,listName:req.params.name}});
+    res.json({list})
+  });
 module.exports = router;
