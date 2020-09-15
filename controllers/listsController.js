@@ -8,7 +8,7 @@ const CategoryModel = require("../models").Category;
 const UnitModel = require("../models").Unit;
 const ListModel = require("../models").List;
 
-//GET LIST PRODUCT STATUES
+//GET LIST PRODUCT STATUSES
 router.get("/lists", async (req,res) =>{
     const list = await ListModel.findAll({where:{userId:req.query.user,listName:req.query.name},
                                           attributes:["listName","pickedStatus"]});
