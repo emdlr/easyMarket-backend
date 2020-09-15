@@ -7,7 +7,7 @@ const ProductModel = require("../models").Product;
 const UnitModel = require("../models").Unit;
 const CategoryModel = require("../models").Category;
 
-// GET USERS PROFILE
+// GET USERS PROFILE AND THEIR LISTS DATA
 router.get("/profile/:id", async (req, res) => {
   let user = await UserModel.findByPk(req.params.id,{include:[{
                                                     model:ListModel,
@@ -29,6 +29,7 @@ router.get("/profile/:id", async (req, res) => {
                                                   });
   res.json({ user });
 });
+//CREATES A USER
 router.post("/", async (req,res) =>{
   let user;
   user = await UserModel.findOne({where:{username:req.body.username}})
@@ -40,6 +41,7 @@ router.post("/", async (req,res) =>{
     res.json({user})
   }
 });
+//VALIDATES USER LOG IN DATA
 router.post("/login", async (req,res) =>{
   let user;
   user = await UserModel.findOne({where:{username:req.body.username,password:req.body.password}})
