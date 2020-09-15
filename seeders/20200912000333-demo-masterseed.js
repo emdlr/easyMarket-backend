@@ -163,8 +163,10 @@ module.exports = {
     ]);
 
     let users = await queryInterface.bulkInsert("Users", [
-      { username:"Edd", password:"Edd", email:"e.mdlr@live.com"},
-      { username:"Cesar", password:"Cesar", email:"cesar@live.com"}
+      { username:"Edgar", password:"Edgar", email:"e.mdlr@live.com"},
+      { username:"Cesar", password:"Cesar", email:"cesar@live.com"},
+      { username:"sei", password:"sei", email:"sei@ga.com"}
+
     ]);
 
   },
