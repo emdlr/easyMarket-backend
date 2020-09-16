@@ -111,8 +111,8 @@ We would cetainly enable other servicies to let user signing up products and sto
 
 **Application Links on Heroku**
 
-### API Heroku Links - Backend
+### APP Heroku Links
 - [LINK](https://easymarket-frontend-ct.herokuapp.com/) - Cesar's Link
-- [LINK](https://easymarketapi-app.herokuapp.com/) - Edgar's Link
+- [LINK](https://easymarket-app.herokuapp.com/) - Edgar's Link
 
 
